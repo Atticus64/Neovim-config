@@ -172,4 +172,4 @@ nvim init.vim
 
 1. [X] Añadir readme
 2. [X] Agregar configuracion
-3. [ ] Agregar wallpapers
+3. [X] Agregar wallpapers
