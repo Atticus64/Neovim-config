@@ -65,6 +65,14 @@ sudo apt install git
 
 * Nerd Fonts es un proyecto que parcha las fuentes que un desarrollador va a usar con un número alto de glifos (iconos).
 
+Instala una Nerdfont en tu equipo desde la pagina oficial
+
+[Nerdfonts](https://www.nerdfonts.com)
+
+* En Windows la descargas, extraes los archivos, seleccionas las fonts y le das click derecho, instalar.
+
+* En Linux tambien las descargas y extraes los archivos y mueve los archivos .ttf y .otf a la carpeta /usr/share/fonts/ 
+
 ## 4. **Vim Plug**
 
 <img src="./assets/vim-plug.png" width="50%">
