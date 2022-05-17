@@ -73,7 +73,36 @@ Instala una Nerdfont en tu equipo desde la pagina oficial
 
 * En Linux tambien las descargas y extraes los archivos y mueve los archivos .ttf y .otf a la carpeta /usr/share/fonts/ 
 
-## 4. **Vim Plug**
+## 4. **Fzf - Command-line Fuzzy Finder**
+
+<img src="./assets/fzf.png" width="40%">
+
+* Fzf es un buscador difuso de línea de comandos diminuto, ultrarrápido, de uso general y multiplataforma, que le ayuda a buscar y abrir archivos rápidamente en los sistemas operativos Linux y Windows.
+
+### Instalar Fzf en Windows
+
+Puede instalarlo con el manejador de paquetes scoop
+
+```
+scoop install fzf
+```
+
+o usar chocolatey
+
+```
+choco install fzf
+```
+
+### Instalar Fzf en Linux
+
+Puede instalar lo usando git
+
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
+## 5. **Vim Plug**
 
 <img src="./assets/vim-plug.png" width="50%">
 
