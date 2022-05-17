@@ -111,6 +111,8 @@ nvim init.vim
 :PlugInstall
 ```
 
+<img src="./assets/install.gif">
+
 ~~Listo tienes tu IDE.~~ Listo tienes tu Neovim tuneado :sunglasses:
 
 1. [X] Añadir readme
