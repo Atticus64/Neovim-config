@@ -4,7 +4,19 @@
 
 <img src="./assets/neovim-logo.png" alt="neovim" title="Neovim logo" width="80%">
 
+---
+
 > Esta configuracion funciona desde la version 0.7.0 con Lua
+
+## Resultado Final:
+
+<img src="./assets/nordPythonPreview.png" alt="nord preview" title="Nord Preview">
+
+<img src="./assets/gruvboxJsPreview.png" alt="gruvbox preview" title="Gruvbox Preview">
+
+<img src="./assets/iconsPreview.png" alt="icons preview" title="Icons Preview">
+
+<img src="./assets/acrilicFzf.png" alt="icons preview" title="Fzf Preview">
 
 ## Dependencias de la configuración
 
