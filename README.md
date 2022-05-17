@@ -134,6 +134,12 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ### 3. Mueve los archivos del repositorio a tu carpeta nvim/
 
+> Para usuarios de Linux cambien la direccion AppData/Local/nvim por ~/.config/nvim/ en los siguientes archivos donde aparezca:
+
+* dashboard.vim
+* init.vim 
+* plugins.vim
+
 ### 4. Instala los Plugins
 
 1. Entra a neovim con el comando, estando dentro del directorio nvim/
