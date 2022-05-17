@@ -67,7 +67,9 @@ sudo apt install git
 
 Instala una Nerdfont en tu equipo desde la pagina oficial
 
-<a href="http://www.nerdfonts.com?target=_blank" >Nerdfonts</a>
+[text-to-highlight](https://www.nerdfonts.com)
+
+<a href="https://www.nerdfonts.com" target="_blank">Nerdfonts</a>
 
 * En Windows la descargas, extraes los archivos, seleccionas las fonts y le das click derecho, instalar.
 
