@@ -2,7 +2,12 @@ let mapleader = ' '
 nnoremap <leader>p :Files<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>uf :Files ~<cr>
+"Abrir bash 
 nnoremap <leader>t :terminal bash.exe<cr>
+"Compilar el archivo cpp
+nnoremap <F3> :!g++ %<cr>
+"Ejecutar el archivo a.exe generedo por la compilacion
+nnoremap <F4> :terminal ; a.exe<cr>
 "Panel Size
 nnoremap <c-[> 10<C-w><
 nnoremap <c-]> 10<C-w>>
