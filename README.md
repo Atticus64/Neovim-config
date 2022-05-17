@@ -159,5 +159,5 @@ nvim init.vim
 ~~Listo tienes tu IDE.~~ Listo tienes tu Neovim tuneado :sunglasses:
 
 1. [X] Añadir readme
-2. [ ] Agregar configuracion
+2. [X] Agregar configuracion
 3. [ ] Agregar wallpapers
