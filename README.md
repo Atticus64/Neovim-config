@@ -36,7 +36,7 @@ o chocolatey
 choco install neovim
 ```
 
-#### **Instalar Git en Unix, Linux**
+#### **Instalar Neovim en Unix, Linux**
 
 Use su manejador de paquetes de confianza apt, dnf, pacman, etc.
 
@@ -71,7 +71,38 @@ Ejemplo en Ubuntu:
 sudo apt install git
 ```
 
-## 3. **Nerdfonts**
+### 3. **Node js** 
+
+<img src="./assets/nodejs-logo-png.png" width="50%">
+
+* Node.js, es un entorno en tiempo de ejecución multiplataforma para la capa del servidor (en el lado del servidor) basado en JavaScript. 
+
+#### **Instalar node js en Windows**
+
+Puede usar el manejador de paquetes scoop 
+
+```
+scoop install nodejs
+```
+O instalarlo con nvm ( node version manager ) con el comando:
+
+```
+scoop install nvm
+```
+
+#### **Instalar node js en Unix, Linux**
+
+Use su manejador de paquetes de confianza apt, dnf, pacman, etc.
+
+Ejemplo en Ubuntu:
+
+```sh
+sudo apt install nodejs
+```
+
+O tambien podrias instalar nvm ( node version manager )
+
+## 4. **Nerdfonts**
 
 <img src="./assets/nerd.jpg" width="40%">
 
@@ -85,7 +116,7 @@ Instala una Nerdfont en tu equipo desde la pagina oficial
 
 * En Linux tambien las descargas y extraes los archivos y mueve los archivos .ttf y .otf a la carpeta /usr/share/fonts/ 
 
-## 4. **Fzf - Command-line Fuzzy Finder**
+## 5. **Fzf - Command-line Fuzzy Finder**
 
 <img src="./assets/fzf.png" width="40%">
 
@@ -114,7 +145,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
-## 5. **Vim Plug**
+## 6. **Vim Plug**
 
 <img src="./assets/vim-plug.png" width="50%">
 
@@ -135,6 +166,13 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
+
+Si no cuenta con curl lo puede instalar con el comando apt, dnf, pacman, etc
+
+```
+sudo apt install curl
+```
+
 ## Instalacion de la configuración
 
 ### 1. Clona este repositorio
