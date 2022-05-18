@@ -206,6 +206,15 @@ nvim init.vim
 
 <img src="./assets/install.gif">
 
+Nota:
+Si estas en Linux comenta en el archivo maps.vim la linea 6 y descomenta la linea 8, deberia quedar algo así:
+
+```
+"nnoremap <leader>t :terminal bash<cr>
+"Si estas en linux solo coloca o si te gusta usar el cmd
+nnoremap <leader>t :terminal <cr>
+``` 
+
 ~~Listo tienes tu IDE.~~ Listo tienes tu Neovim tuneado :sunglasses:
 
 1. [X] Añadir readme

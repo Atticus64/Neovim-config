@@ -3,7 +3,9 @@ nnoremap <leader>p :Files<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>uf :Files ~<cr>
 "Abrir bash 
-nnoremap <leader>t :terminal bash.exe<cr>
+nnoremap <leader>t :terminal bash<cr>
+"Si estas en linux solo coloca o si te gusta usar el cmd
+"nnoremap <leader>t :terminal <cr>
 "Compilar el archivo cpp
 nnoremap <F3> :!g++ %<cr>
 "Ejecutar el archivo a.exe generedo por la compilacion
@@ -43,3 +45,11 @@ imap ,, <esc>
 vmap <leader>f $
 vmap <leader>a ^
 vmap ,, <esc>
+nnoremap <M-k> :call ShowDocumentation()<CR>
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
