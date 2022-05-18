@@ -16,8 +16,8 @@ let g:gruvbox_contrast_dark = "hard"
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf',  { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'SirVer/ultisnips'
-"Plug 'mlaursen/vim-react-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
@@ -43,7 +43,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Lualine
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
-"Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 "Treesitter 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
