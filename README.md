@@ -18,6 +18,41 @@
 
 <img src="./assets/acrilicFzf.png" alt="icons preview" title="Fzf Preview">
 
+### Lista de Plugins de la Configuracion
+
+- [Vim-polyglot](https://github.com/sheerun/vim-polyglot)
+- [Vim-devicons](https://github.com/ryanoasis/vim-devicons)
+- [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) 
+- [Fzf.vim](https://github.com/junegunn/fzf) 
+- [Vim-signify](https://github.com/mhinz/vim-signify)
+- [Supertab](https://github.com/ervandew/supertab) 
+- [Nord-vim](https://github.com/arcticicestudio/nord-vim)
+- [Vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) 
+- [Oceanic-material](https://github.com/glepnir/oceanic-material) 
+- [Coc.nvim](https://github.com/neoclide/coc.nvim) 
+- [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) 
+- [Vim-transparent](https://github.com/tribela/vim-transparent) 
+- [Vim-repeat](https://github.com/tpope/vim-repeat)
+- [Nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) 
+- [Auto-pairs](https://github.com/jiangmiao/auto-pairs)
+- [Nerdtree](https://github.com/preservim/nerdtree)
+- [Vim-react-snippets](https://github.com/mlaursen/vim-react-snippets) 
+- [Dracula](https://draculatheme.com/vim)
+- [Ultisnips](https://github.com/SirVer/ultisnips) 
+- [Indentline](https://github.com/Yggdroot/indentLine) 
+- [Emmet-vim](https://github.com/mattn/emmet-vim)
+- [Vim-surround](https://github.com/tpope/vim-surround) 
+- [Dashboard-nvim](https://github.com/glepnir/dashboard-nvim) 
+- [Gruvbox](https://github.com/morhetz/gruvbox)
+- [Molokai](https://github.com/tomasr/molokai)
+- [Vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
+- [Shades-of-purple.vim](https://github.com/Rigellute/shades-of-purple.vim)
+- [Nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
+- [Nerdcommenter](https://github.com/preservim/nerdcommenter)
+- [Onedark.vim](https://github.com/joshdick/onedark.vim)
+- [Vim-easymotion](https://github.com/easymotion/vim-easymotion) 
+- [Vim-rainbow](https://github.com/easymotion/vim-easymotion)
+
 ## Dependencias de la configuración
 
 ### 1. **Neovim** 
