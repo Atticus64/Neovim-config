@@ -51,7 +51,7 @@
 - [Nerdcommenter](https://github.com/preservim/nerdcommenter)
 - [Onedark.vim](https://github.com/joshdick/onedark.vim)
 - [Vim-easymotion](https://github.com/easymotion/vim-easymotion) 
-- [Vim-rainbow](https://github.com/easymotion/vim-easymotion)
+- [Vim-rainbow](https://github.com/frazrepo/vim-rainbow)
 
 ## Dependencias de la configuración
 
