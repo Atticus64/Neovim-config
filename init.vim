@@ -35,8 +35,8 @@ so ~/AppData/Local/nvim/dashboard.vim
 so ~/AppData/Local/nvim/automatics.vim
 so ~/AppData/Local/nvim/config.lua
 
-colorscheme dracula
-"colorscheme onedark
+"colorscheme dracula
+colorscheme gruvbox
 "colorscheme nord
 "colorscheme oceanic_material
 "Dashboard config

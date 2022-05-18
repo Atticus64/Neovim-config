@@ -220,3 +220,4 @@ nnoremap <leader>t :terminal <cr>
 1. [X] Añadir readme
 2. [X] Agregar configuracion
 3. [X] Agregar wallpapers
+4. [ ] Agregar Tabla de Shortcuts 
