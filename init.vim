@@ -18,6 +18,7 @@ set nolist
 set showcmd
 set noexpandtab
 set ruler
+set guicursor=a:block
 set termguicolors
 hi CursorLineNr guifg=#af00af
 set cursorline
