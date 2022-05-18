@@ -215,9 +215,49 @@ Si estas en Linux comenta en el archivo maps.vim la linea 6 y descomenta la line
 nnoremap <leader>t :terminal <cr>
 ``` 
 
+Atajos de Teclado 
+
+| Key | Action |
+| -- | --|
+| Space + p | Fzf search in Directory | 
+| Space + b | Fzf Buffers |
+| Space + uf | Fzf search in ~ | 
+| Space + t | Open terminal |
+| F3 | Compile current file .cpp |
+| F4 | Run current file .cpp | 
+| Alt + ] | Move Buffer to right | 
+| Alt + [ | Move Buffer to left |
+| gd | Go to definition |
+| gy | Go to type definition |
+| gi | Go to implementation |
+| gr | Go to references |
+| Space + w | Save file |
+| Space + e | Exit without saving |
+| Space + q | Exit | 
+| Space + s | Plugin EasyMotion-2 |     
+| J | jump 10 lines down | 
+| K | jump 10 lines up | 
+| Space + nt | Open NerdTree |
+| Space + plug | Install plugins |
+| Space + f | Go to end of the line |
+| Space + a | Go to the begin of the line |
+| Space + nt | Open NerdTree |
+| ,, | Esc |
+| Alt + k | Show Documentation Hover |
+| Space + Y | Copy all content of File |
+| Y | Copy to end of the line | 
+| Space + cf | Open init.vim |
+| Space + bh | Fzf Search in History | 
+| Space + ba | Fzf Find File |
+| Space + ct | Fzf Change Colorscheme |
+| Space + bw | Fzf Search Word |
+| Space + bj | Fzf Jump Bookmark |
+| Space + nf | Open new file |
+| Space + d | Prettier |
+
 ~~Listo tienes tu IDE.~~ Listo tienes tu Neovim tuneado :sunglasses:
 
 1. [X] Añadir readme
 2. [X] Agregar configuracion
 3. [X] Agregar wallpapers
-4. [ ] Agregar Tabla de Shortcuts 
+4. [X] Agregar Tabla de Shortcuts 
