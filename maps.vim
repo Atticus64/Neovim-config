@@ -11,8 +11,8 @@ nnoremap <F3> :!g++ %<cr>
 "Ejecutar el archivo a.exe generedo por la compilacion
 nnoremap <F4> :terminal ; a.exe<cr>
 "Panel Size
-nnoremap <c-[> 10<C-w><
-nnoremap <c-]> 10<C-w>>
+nnoremap <M-[> 10<C-w><
+nnoremap <M-]> 10<C-w>>
  "Remap keys for gotos
 nnoremap <silent><C-i> gd <Plug>(coc-definition)
 nnoremap <silent><C-i> gy <Plug>(coc-type-definition)
