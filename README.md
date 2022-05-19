@@ -241,6 +241,20 @@ nvim init.vim
 
 <img src="./assets/install.gif">
 
+Instala las siguientes extensiones de CoC
+
+* coc-prettier
+* coc-json
+* coc-css
+* coc-html
+* coc-rome
+
+Para instalarlas debes poner el neovim el comando `CocInstall` y luego el nombre de la extensión
+
+```
+CocInstall coc-prettier
+```
+
 Nota:
 Si estas en Linux comenta en el archivo maps.vim la linea 6 y descomenta la linea 8, deberia quedar algo así:
 
@@ -270,8 +284,8 @@ Atajos de Teclado
 | Space + e | Exit without saving |
 | Space + q | Exit | 
 | Space + s | Plugin EasyMotion-2 |     
-| J | jump 10 lines down | 
-| K | jump 10 lines up | 
+| J | Jump 10 lines down | 
+| K | Jump 10 lines up | 
 | Space + nt | Open NerdTree |
 | Space + plug | Install plugins |
 | Space + f | Go to end of the line |
