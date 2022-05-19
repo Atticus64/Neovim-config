@@ -252,7 +252,7 @@ Instala las siguientes extensiones de CoC
 Para instalarlas debes poner el neovim el comando `CocInstall` y luego el nombre de la extensión
 
 ```
-CocInstall coc-prettier
+:CocInstall coc-prettier
 ```
 
 Nota:
