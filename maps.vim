@@ -6,6 +6,9 @@ nnoremap <leader>uf :Files ~<cr>
 nnoremap <leader>t :terminal bash<cr>
 "Si estas en linux solo coloca o si te gusta usar el cmd
 "nnoremap <leader>t :terminal <cr>
+"Atajo para abrir una terminal diferente a la actual
+"Pueden cambiar powershell por otra terminal
+nnoremap <leader>ot :terminal powershell<cr>
 "Compilar el archivo cpp
 nnoremap <F3> :!g++ %<cr>
 "Ejecutar el archivo a.exe generedo por la compilacion

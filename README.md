@@ -263,6 +263,11 @@ Si estas en Linux comenta en el archivo maps.vim la linea 6 y descomenta la line
 "Si estas en linux solo coloca o si te gusta usar el cmd
 nnoremap <leader>t :terminal <cr>
 ``` 
+Y en la linea 11 cambia powershell por otra terminal que prefieras o comenta la linea
+
+```
+"nnoremap <leader>ot :terminal powershell<cr>
+```
 
 Atajos de Teclado 
 
@@ -303,6 +308,7 @@ Atajos de Teclado
 | Space + bj | Fzf Jump Bookmark |
 | Space + nf | Open new file |
 | Space + d | Prettier |
+| Space + ot | Open Custom terminal - Default powershell |
 
 ~~Listo tienes tu IDE.~~ Listo tienes tu Neovim tuneado :sunglasses:
 
