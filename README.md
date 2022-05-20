@@ -247,7 +247,6 @@ Instala las siguientes extensiones de CoC
 * coc-json
 * coc-css
 * coc-html
-* coc-rome
 
 Para instalarlas debes poner el neovim el comando `CocInstall` y luego el nombre de la extensión
 
