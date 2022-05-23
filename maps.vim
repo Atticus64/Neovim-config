@@ -10,17 +10,21 @@ nnoremap <leader>t :terminal bash<cr>
 "Pueden cambiar powershell por otra terminal
 nnoremap <leader>ot :terminal powershell<cr>
 "Compilar el archivo cpp
-nnoremap <F3> :!g++ %<cr>
+nnoremap <F3> :!g++ % -o %:r<cr>
 "Ejecutar el archivo a.exe generedo por la compilacion
-nnoremap <F4> :terminal ; a.exe<cr>
+nnoremap <F4> :terminal ; %:r.exe<cr>
 "Panel Size
 nnoremap <M-[> 10<C-w><
 nnoremap <M-]> 10<C-w>>
  "Remap keys for gotos
-nnoremap <silent><C-i> gd <Plug>(coc-definition)
-nnoremap <silent><C-i> gy <Plug>(coc-type-definition)
-nnoremap <silent><C-i> gi <Plug>(coc-implementation)
-nnoremap <silent><C-i> gr <Plug>(coc-references)
+"nnoremap <silent><C-i> gd <Plug>(coc-definition)
+"nnoremap <silent><C-i> gy <Plug>(coc-type-definition)
+"nnoremap <silent><C-i> gi <Plug>(coc-implementation)
+"nnoremap <silent><C-i> gr <Plug>(coc-references)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <leader>w :w<cr>
 "Guardar => Space + w
 nnoremap <leader>q :q<cr>
@@ -56,3 +60,5 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+"Rename symbol
+nnoremap <leader>rn <Plug>(coc-rename)
