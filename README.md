@@ -308,6 +308,7 @@ Atajos de Teclado
 | Space + nf | Open new file |
 | Space + d | Prettier |
 | Space + ot | Open Custom terminal - Default powershell |
+| Space + rn | Rename symbol | 
 
 ~~Listo tienes tu IDE.~~ Listo tienes tu Neovim tuneado :sunglasses:
 
