@@ -65,6 +65,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nnoremap <leader>d :Prettier<cr>
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
-let $FZF_DEFAULT_OPTS='--layout=reverse'
+let $FZF_DEFAULT_OPTS='--layout=reverse --color dark'
+"let $FZF_DEFAULT_OPTS='--layout=reverse --color bw'
 "Vim bracket colors
 let g:rainbow_active = 1
+let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
+let g:indentLine_fileTypeExclude = ['dashboard']
