@@ -262,10 +262,16 @@ Si estas en Linux comenta en el archivo maps.vim la linea 6 y descomenta la line
 "Si estas en linux solo coloca o si te gusta usar el cmd
 nnoremap <leader>t :terminal <cr>
 ``` 
-Y en la linea 11 cambia powershell por otra terminal que prefieras o comenta la linea
+Y en la linea 11 cambia powershell por otra terminal que prefieras o comenta la linea, 
 
 ```
 "nnoremap <leader>ot :terminal powershell<cr>
+```
+
+Otra linea que tienes que comentar es la 72 del archivo init.vim
+
+```
+"let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
 ```
 
 Atajos de Teclado 
