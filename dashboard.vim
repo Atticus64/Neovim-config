@@ -20,7 +20,7 @@ let g:dashboard_custom_header = [
 "Atajos de DashBoard
 "nmap <leader>ks :<C-u>SessionSave<CR>
 "nmap <leader>ls :<C-u>SessionLoad<CR>
-nnoremap <leader>cf :edit ~/AppData\Local\nvim\init.vim<CR>
+nnoremap <leader>cf :edit ~/.config/nvim/init.vim<CR>
 nnoremap <silent> <Leader>bh :DashboardFindHistory<CR>
 nnoremap <silent> <Leader>ba :DashboardFindFile<CR>
 nnoremap <silent> <Leader>ct :DashboardChangeColorscheme<CR>
@@ -46,7 +46,7 @@ let g:dashboard_custom_section = {
 	\},
 	\ 'row4': {
 		\ 'description': ['    Abrir Vimrc                             SPC c f'],
-		\ 'command': 'edit ~/AppData\Local\nvim\init.vim'
+		\ 'command': 'edit ~/.config/nvim/init.vim'
 	\},
 	\ 'row5': {
 		\ 'description': ['   Saltar a Book Mark                      SPC b j'],

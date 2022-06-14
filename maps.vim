@@ -2,25 +2,16 @@ let mapleader = ' '
 nnoremap <leader>p :Files<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>uf :Files ~<cr>
-"Abrir bash 
-nnoremap <leader>t :terminal bash<cr>
-"Si estas en linux solo coloca o si te gusta usar el cmd
-"nnoremap <leader>t :terminal <cr>
+nnoremap <leader>t :terminal <cr>
 "Atajo para abrir una terminal diferente a la actual
-"Pueden cambiar powershell por otra terminal
-nnoremap <leader>ot :terminal powershell<cr>
 "Compilar el archivo cpp
 nnoremap <F3> :!g++ % -o %:r<cr>
 "Ejecutar el archivo a.exe generedo por la compilacion
-nnoremap <F4> :terminal ; %:r.exe<cr>
+nnoremap <F4> :terminal ; ./%:r<cr>
 "Panel Size
 nnoremap <M-[> 10<C-w><
 nnoremap <M-]> 10<C-w>>
  "Remap keys for gotos
-"nnoremap <silent><C-i> gd <Plug>(coc-definition)
-"nnoremap <silent><C-i> gy <Plug>(coc-type-definition)
-"nnoremap <silent><C-i> gi <Plug>(coc-implementation)
-"nnoremap <silent><C-i> gr <Plug>(coc-references)
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gy <Plug>(coc-type-definition)
 nnoremap <silent> gi <Plug>(coc-implementation)
@@ -62,3 +53,5 @@ function! ShowDocumentation()
 endfunction
 "Rename symbol
 nnoremap <leader>rn <Plug>(coc-rename)
+"Crear una lista de numeros
+vnoremap <C-l> g<C-a>

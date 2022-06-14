@@ -1,4 +1,4 @@
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 "Themes
 Plug 'arcticicestudio/nord-vim'
 Plug 'glepnir/oceanic-material'

@@ -14,6 +14,7 @@ set rnu
 set numberwidth=1
 set clipboard=unnamed
 syntax enable
+set nowrap
 set nolist
 set showcmd
 set noexpandtab
@@ -29,11 +30,11 @@ set showmatch
 set laststatus=2
 set noshowmode
 
-so ~/AppData/Local/nvim/maps.vim
-so ~/AppData/Local/nvim/plugins.vim
-so ~/AppData/Local/nvim/dashboard.vim
-so ~/AppData/Local/nvim/automatics.vim
-so ~/AppData/Local/nvim/config.lua
+so ~/.config/nvim/maps.vim
+so ~/.config/nvim/plugins.vim
+so ~/.config/nvim/dashboard.vim
+so ~/.config/nvim/automatics.vim
+so ~/.config/nvim/config.lua
 
 "colorscheme dracula
 colorscheme gruvbox
@@ -66,8 +67,6 @@ nnoremap <leader>d :Prettier<cr>
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 let $FZF_DEFAULT_OPTS='--layout=reverse --color dark'
-"let $FZF_DEFAULT_OPTS='--layout=reverse --color bw'
 "Vim bracket colors
 let g:rainbow_active = 1
-let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
 let g:indentLine_fileTypeExclude = ['dashboard']
