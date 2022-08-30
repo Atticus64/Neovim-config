@@ -31,23 +31,22 @@ require'bufferline'.setup {
     icons = true,
 }  
 
-  local home = os.getenv('HOME')
   local db = require('dashboard')
   -- macos
-  db.preview_command = 'cat | lolcat -F 0.3'
+  db.preview_command = 'cat | lolcat'
   -- linux
-  db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
+  db.preview_file_path = '~/.config/nvim/static/neovim.cat'
   db.preview_file_height = 10
   db.preview_file_width = 70
   db.custom_center = {
       {icon = '  ',
       desc = 'Command History                         ',
-      shortcut = 'SPC s l',
+      shortcut = 'SPC c h',
       action =':Telescope command_history'},
       {icon = '  ',
       desc = 'Recently opened files                   ',
       action =  ':Telescope oldfiles',
-      shortcut = 'SPC f h'},
+      shortcut = 'SPC f o'},
       {icon = '  ',
       desc = 'Find File                               ',
       action = ':Telescope find_files',
@@ -55,7 +54,7 @@ require'bufferline'.setup {
       {icon = '  ',
       desc ='Change Theme                            ',
       action =  ':Telescope colorscheme',
-      shortcut = 'SPC f b'},
+      shortcut = 'SPC c t'},
       {icon = '  ',
       desc = 'Open Personal dotfiles                  ',
       action = ':edit ~/.config/nvim/',

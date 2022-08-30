@@ -32,13 +32,21 @@ map("n", "<Leader>d", ":tabNext<CR>")
 -- open tab edit 
 map("n", "<leader>te", ":tabedit ")
 
+
+-- Dashboard shortcuts
+map("n", "<leader>ch", ":Telescope command_history")
+map("n", "<leader>fo", ":Telescope oldfiles<CR>")
+map("n", "<leader>ct", ":Telescope colorscheme<CR>")
+map("n", "<leader>fd", ":edit ~/.config/nvim/<CR>")
+
+
 -- toggle comment
 map("n", "<leader>c<Leader>", ":CommentToggle<CR>")
 map("v", "<leader>c<Leader>", ":CommentToggle<CR>")
 
 -- custom
-map("n", "u", "10k")
-map("n", "p", "10j")
+map("n", "-", "10k")
+map("n", "m", "10j")
 map("n", "<Leader>Y", ":%y+<CR>")
 map("n", "Y", "y$")
 map("n", "<leader>g", "$")

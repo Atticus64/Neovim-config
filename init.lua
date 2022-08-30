@@ -1,6 +1,6 @@
 
 if require "install_packer"() then
-    return
+  return
 end
 
 
