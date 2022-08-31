@@ -1,6 +1,6 @@
 # Nvim Lua Config
 
-<img width='50%' src='https://i.postimg.cc/sx86FDZY/lua-config.png'>
+<img width='80%' src='https://i.postimg.cc/sx86FDZY/lua-config.png'>
 
 ## Requirements 
 
