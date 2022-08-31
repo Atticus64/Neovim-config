@@ -1,3 +1,5 @@
+local config = vim.env.MYVIMRC
+
 require('lualine').setup {
     options = { theme  = 'onedark' },
 }
@@ -32,9 +34,19 @@ require'bufferline'.setup {
 }  
 
   local db = require('dashboard')
-  -- macos
-  db.preview_command = 'cat | lolcat'
-  -- linux
+  -- only for linux
+  -- install lolcat to use
+  -- db.preview_command = 'cat | lolcat'
+
+  db.custom_header = {
+		[[███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
+		[[████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║]],
+		[[██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║]],
+		[[██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
+		[[██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
+		[[╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
+  }
+  
   db.preview_file_path = '~/.config/nvim/static/neovim.cat'
   db.preview_file_height = 10
   db.preview_file_width = 70
@@ -57,7 +69,7 @@ require'bufferline'.setup {
       shortcut = 'SPC c t'},
       {icon = '  ',
       desc = 'Open Personal dotfiles                  ',
-      action = ':edit ~/.config/nvim/',
+      action = ':edit ' ..  config,
       shortcut = 'SPC f d'},
     }
 

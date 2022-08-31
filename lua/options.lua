@@ -9,16 +9,16 @@ options.nu = true
 options.rnu = true
 options.numberwidth = 1
 options.clipboard = "unnamed"
-options.nolist = true
-options.noexpandtab = true
 options.guicursor = block
 options.cursorline = true
-options.guifg= '#af00af'
+options.shiftwidth= 2
 options.tabstop = 2
 options.encoding = 'utf-8'
-options.showmatch = "true"
 options.laststatus = 2
-options.noshowmode = true
 
 vim.cmd [[set mouse=a]]
 vim.cmd [[colorscheme onedark]]
+vim.cmd [[set noexpandtab]]
+vim.cmd [[set nolist]]
+vim.cmd [[set noshowmode]]
+vim.cmd [[set showmatch]]
