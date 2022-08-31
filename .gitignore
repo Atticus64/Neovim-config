@@ -1,4 +1,8 @@
 
+autoload/
+plugged/
+README.md.backup
+
 ./plugin/*
 ./plugin/packer_compiled.lua
 plugged/

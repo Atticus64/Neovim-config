@@ -66,8 +66,7 @@ map("n", "<leader>fb", ":Telescope buffers<CR>")
 map("n", "<leader>fh", ":Telescope help_tags<CR>")
 
 -- NvimTree
-map("n", "<leader>nt", ":NvimTreeOpen<CR>")
-map("n", "<leader>cnt", ":NvimTreeClose<CR>")
+map("n", "<leader>nt", ":NvimTreeToggle<CR>")
 
 
 -- Tmux Navigator
