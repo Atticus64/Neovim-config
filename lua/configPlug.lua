@@ -121,6 +121,9 @@ require('telescope').setup {
       }
     },
 }
+
+require'hop'.setup()
+
 -- require('onedark').setup {
     -- transparent = true,  -- Show/hide background
 -- }

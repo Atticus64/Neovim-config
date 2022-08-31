@@ -40,6 +40,12 @@ map("n", "<leader>ct", ":Telescope colorscheme<CR>")
 map("n", "<leader>fd", ":edit ~/.config/nvim/<CR>")
 
 
+-- Hop shortcuts
+
+map("n", "<Leader>s", ":HopAnywhere<CR>")
+map("n", "<Leader>sl", ":HopLine<CR>")
+
+
 -- toggle comment
 map("n", "<leader>c<Leader>", ":CommentToggle<CR>")
 map("v", "<leader>c<Leader>", ":CommentToggle<CR>")
