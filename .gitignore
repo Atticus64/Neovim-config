@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+
 autoload/
 plugged/
 README.md.backup
-=======
 
 ./plugin/*
 ./plugin/packer_compiled.lua
 plugged/
 autoload/
->>>>>>> lua
+README.md.backup
