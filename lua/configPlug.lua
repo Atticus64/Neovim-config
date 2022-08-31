@@ -1,4 +1,5 @@
 local config = vim.env.MYVIMRC
+-- You can change this variable to your dotfiles
 
 require('lualine').setup {
     options = { theme  = 'onedark' },
