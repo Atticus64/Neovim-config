@@ -2,6 +2,8 @@
 
 <img width='80%' src='https://i.postimg.cc/sx86FDZY/lua-config.png'>
 
+> Configuration works in Linux!, not recomended for Windows
+
 ## Requirements 
 
 > if you work with nodejs: 
@@ -42,11 +44,6 @@ To install packer manualy enter the next command
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-**In windows**
-```
-git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 ```
 
 3. Enter the next command in neovim 
