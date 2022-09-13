@@ -28,11 +28,13 @@
 
 1. Copy the files in your config folder
 
-> Examples
-
-* Windows: ~/AppData/Local/nvim/
-
 * Linux: ~/.config/nvim/
+
+Clone directly with the command
+
+```
+git clone https://github.com/Atticus64/Neovim-config.git $HOME/.config/nvim
+```
 
 2. Install packer or enter in Neovim and press yes in the next message
 
