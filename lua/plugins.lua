@@ -7,6 +7,18 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
+		use {
+    'goolord/alpha-nvim',
+		}
+
+		use {
+			'lewis6991/impatient.nvim'
+		}
+
+		use {
+			'nvim-tree/nvim-web-devicons'
+		}
+
 		-- Prettier
 		use {
 			'MunifTanjim/prettier.nvim'
@@ -23,8 +35,6 @@ return require('packer').startup(function(use)
 	-- Comment
     use "terrortylor/nvim-comment"
 
-  -- Dashboard
-	  use {'glepnir/dashboard-nvim'}
 
     -- Complements
 

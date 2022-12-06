@@ -18,6 +18,8 @@ require('prettier').setup {
   },
 }
 
+require'alpha'.setup(require'alpha.themes.dashboard'.config)
+
 require('lualine').setup {
     options = { theme  = 'onedark' },
 }
@@ -48,47 +50,6 @@ require'bufferline'.setup {
     -- if set to 'both', will show buffer index and icons in the tabline
     icons = true,
 }  
-
-  local db = require('dashboard')
-  -- only for linux
-  -- install lolcat to use
-  db.preview_command = 'cat | lolcat'
-
-  db.custom_header = {
-		[[███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
-		[[████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║]],
-		[[██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║]],
-		[[██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
-		[[██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
-		[[╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
-  }
-  
-  db.preview_file_path = '~/.config/nvim/static/neovim.cat'
-  db.preview_file_height = 10
-  db.preview_file_width = 70
-  db.custom_center = {
-      {icon = '  ',
-      desc = 'Command History                         ',
-      shortcut = 'SPC c h',
-      action =':Telescope command_history'},
-      {icon = '  ',
-      desc = 'Recently opened files                   ',
-      action =  ':Telescope oldfiles',
-      shortcut = 'SPC f o'},
-      {icon = '  ',
-      desc = 'Find File                               ',
-      action = ':Telescope find_files',
-      shortcut = 'SPC f f'},
-      {icon = '  ',
-      desc ='Change Theme                            ',
-      action =  ':Telescope colorscheme',
-      shortcut = 'SPC c t'},
-      {icon = '  ',
-      desc = 'Open Personal dotfiles                  ',
-      action = ':edit ' ..  config,
-      shortcut = 'SPC f d'},
-    }
-
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "c", "lua", "rust", "python", "javascript"},
