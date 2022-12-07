@@ -37,6 +37,7 @@ map("n", "<leader>te", ":tabedit ")
 map("n", "<leader>ch", ":Telescope command_history")
 map("n", "<leader>fo", ":Telescope oldfiles<CR>")
 map("n", "<leader>ct", ":Telescope colorscheme<CR>")
+map("n", "<leader>td", ":Telescope diagnostics<CR>")
 map("n", "<leader>fd", ":edit ~/.config/nvim/<CR>")
 
 
@@ -78,26 +79,26 @@ map("n", "<C-j>", ":lua require('tmux').move_top()<CR>")
 
 
 -- barbar shortcuts
-map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+map('n', '<A-,>', ':BufferPrevious<CR>' )
+map('n', '<A-.>', ':BufferNext<CR>' )
 -- Re-order to previous/next
-map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+map('n', '<A-<>', ':BufferMovePrevious<CR>' )
+map('n', '<A->>', ':BufferMoveNext<CR>' )
 -- Goto buffer in position...
-map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
-map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
-map('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
-map('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
-map('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
-map('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', opts)
-map('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
-map('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
-map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
-map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
+map('n', '<A-1>', ':BufferGoto 1<CR>' )
+map('n', '<A-2>', ':BufferGoto 2<CR>' )
+map('n', '<A-3>', ':BufferGoto 3<CR>' )
+map('n', '<A-4>', ':BufferGoto 4<CR>' )
+map('n', '<A-5>', ':BufferGoto 5<CR>' )
+map('n', '<A-6>', ':BufferGoto 6<CR>' )
+map('n', '<A-7>', ':BufferGoto 7<CR>' )
+map('n', '<A-8>', ':BufferGoto 8<CR>' )
+map('n', '<A-9>', ':BufferGoto 9<CR>' )
+map('n', '<A-0>', ':BufferLast<CR>' )
 -- Pin/unpin buffer
-map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
+map('n', '<A-p>', ':BufferPin<CR>' )
 -- Close buffer
-map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
+map('n', '<A-c>', ':BufferClose<CR>' )
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
@@ -107,12 +108,12 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
-map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
+map('n', '<C-p>', ':BufferPick<CR>' )
 -- Sort automatically by...
-map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
-map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
-map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
-map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
+map('n', '<leader>bb', ':BufferOrderByBufferNumber<CR>' )
+map('n', '<leader>bd', ':BufferOrderByDirectory<CR>' )
+map('n', '<leader>bl', ':BufferOrderByLanguage<CR>' )
+map('n', '<leader>bw', ':BufferOrderByWindowNumber<CR>' )
 
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
