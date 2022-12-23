@@ -1,11 +1,13 @@
-vim.cmd [[packadd packer.nvim]]
+vim.cmd.packadd('packer.nvim')
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-   use {
+   	use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+
+		use 'tpope/vim-surround'
 
 		use {
     'goolord/alpha-nvim',
