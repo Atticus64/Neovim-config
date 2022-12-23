@@ -2,6 +2,7 @@ local format_on_save = function(_)
 	vim.cmd('autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()')
 end
 
+
 local filetype_attach = setmetatable({
 	-- go = format_on_save,
 	-- php = format_on_save,
@@ -109,7 +110,48 @@ require("lspconfig").gdscript.setup({
 
 require("lspconfig").tsserver.setup({
 	on_attach = on_attach,
+	autostart = false,
 	flags = lsp_flags,
+})
+
+
+-- require("lspconfig").denols.setup({
+-- 	on_attach = on_attach,
+--
+-- 	root_dir = nvim_lsp.util.root_pattern("deno.json"),
+-- 	flags = lsp_flags,
+-- })
+--
+require "deno-nvim".setup({
+	server = {
+		on_attach = on_attach,
+		capabilities = lsp_flags,
+		settings = {
+			deno = {
+				inlayHints = {
+					parameterNames = {
+						enabled = "all"
+					},
+					parameterTypes = {
+						enabled = true
+					},
+					variableTypes = {
+						enabled = true
+					},
+					propertyDeclarationTypes = {
+						enabled = true
+					},
+					functionLikeReturnTypes = {
+						enabled = true
+					},
+					enumMemberValues = {
+						enabled = true
+					},
+				}
+
+			}
+		}
+	}
 })
 
 require("lspconfig").volar.setup({

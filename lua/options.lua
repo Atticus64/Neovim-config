@@ -11,10 +11,16 @@ options.numberwidth = 1
 options.clipboard = "unnamed"
 options.guicursor = ""
 options.cursorline = true
-options.shiftwidth= 2
+options.shiftwidth = 2
 options.tabstop = 2
 options.encoding = 'utf-8'
 options.laststatus = 2
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
+vim.opt.updatetime = 50
+vim.opt.colorcolumn = "80"
+
 
 vim.cmd.set('mouse=a')
 vim.cmd.colorscheme('onedark')

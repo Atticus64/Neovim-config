@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
+		use 'neovim/nvim-lspconfig'
+		use 'sigmasd/deno-nvim'
+
 		use 'tpope/vim-surround'
 
 		use {

@@ -1,12 +1,17 @@
-
 -- Functional wrapper for mapping custom keybindings
 function map(mode, lhs, rhs, opts)
-    local options = { noremap = true }
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	local options = { noremap = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
+
+-- Deno
+vim.keymap.set("n", "<space>dr", function()
+	vim.lsp.codelens.refresh();
+	vim.lsp.codelens.run()
+end)
 
 -- exit insert mode
 map("i", ",,", "<esc>")
@@ -26,10 +31,10 @@ map("n", "<Leader>e", ":q!<CR>")
 -- open terminal
 map("n", "<Leader>ot", ":term<CR>")
 
--- next tab 
+-- next tab
 map("n", "<Leader>d", ":tabNext<CR>")
 
--- open tab edit 
+-- open tab edit
 map("n", "<leader>te", ":tabedit ")
 
 
@@ -60,7 +65,7 @@ map("n", "<leader>g", "$")
 map("n", "<leader>a", "^")
 
 
--- Telescope 
+-- Telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>")
 map("n", "<leader>fg", ":Telescope live_grep<CR>")
 map("n", "<leader>fb", ":Telescope buffers<CR>")
@@ -79,26 +84,26 @@ map("n", "<C-j>", ":lua require('tmux').move_top()<CR>")
 
 
 -- barbar shortcuts
-map('n', '<A-,>', ':BufferPrevious<CR>' )
-map('n', '<A-.>', ':BufferNext<CR>' )
+map('n', '<A-,>', ':BufferPrevious<CR>')
+map('n', '<A-.>', ':BufferNext<CR>')
 -- Re-order to previous/next
-map('n', '<A-<>', ':BufferMovePrevious<CR>' )
-map('n', '<A->>', ':BufferMoveNext<CR>' )
+map('n', '<A-<>', ':BufferMovePrevious<CR>')
+map('n', '<A->>', ':BufferMoveNext<CR>')
 -- Goto buffer in position...
-map('n', '<A-1>', ':BufferGoto 1<CR>' )
-map('n', '<A-2>', ':BufferGoto 2<CR>' )
-map('n', '<A-3>', ':BufferGoto 3<CR>' )
-map('n', '<A-4>', ':BufferGoto 4<CR>' )
-map('n', '<A-5>', ':BufferGoto 5<CR>' )
-map('n', '<A-6>', ':BufferGoto 6<CR>' )
-map('n', '<A-7>', ':BufferGoto 7<CR>' )
-map('n', '<A-8>', ':BufferGoto 8<CR>' )
-map('n', '<A-9>', ':BufferGoto 9<CR>' )
-map('n', '<A-0>', ':BufferLast<CR>' )
+map('n', '<A-1>', ':BufferGoto 1<CR>')
+map('n', '<A-2>', ':BufferGoto 2<CR>')
+map('n', '<A-3>', ':BufferGoto 3<CR>')
+map('n', '<A-4>', ':BufferGoto 4<CR>')
+map('n', '<A-5>', ':BufferGoto 5<CR>')
+map('n', '<A-6>', ':BufferGoto 6<CR>')
+map('n', '<A-7>', ':BufferGoto 7<CR>')
+map('n', '<A-8>', ':BufferGoto 8<CR>')
+map('n', '<A-9>', ':BufferGoto 9<CR>')
+map('n', '<A-0>', ':BufferLast<CR>')
 -- Pin/unpin buffer
-map('n', '<A-p>', ':BufferPin<CR>' )
+map('n', '<A-p>', ':BufferPin<CR>')
 -- Close buffer
-map('n', '<A-c>', ':BufferClose<CR>' )
+map('n', '<A-c>', ':BufferClose<CR>')
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
@@ -108,12 +113,12 @@ map('n', '<A-c>', ':BufferClose<CR>' )
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
-map('n', '<C-p>', ':BufferPick<CR>' )
+map('n', '<C-p>', ':BufferPick<CR>')
 -- Sort automatically by...
-map('n', '<leader>bb', ':BufferOrderByBufferNumber<CR>' )
-map('n', '<leader>bd', ':BufferOrderByDirectory<CR>' )
-map('n', '<leader>bl', ':BufferOrderByLanguage<CR>' )
-map('n', '<leader>bw', ':BufferOrderByWindowNumber<CR>' )
+map('n', '<leader>bb', ':BufferOrderByBufferNumber<CR>')
+map('n', '<leader>bd', ':BufferOrderByDirectory<CR>')
+map('n', '<leader>bl', ':BufferOrderByLanguage<CR>')
+map('n', '<leader>bw', ':BufferOrderByWindowNumber<CR>')
 
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
