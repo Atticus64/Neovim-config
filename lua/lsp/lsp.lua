@@ -1,16 +1,14 @@
 local format_on_save = function(_)
-	vim.cmd([[
-      augroup lsp_buf_format
-        au! BufWritePre <buffer>
-        autocmd BufWritePre <buffer> :lua vim.lsp.buf.format({ async = true })
-      augroup END
-    ]])
+	vim.cmd('autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()')
 end
 
 local filetype_attach = setmetatable({
 	-- go = format_on_save,
 	-- php = format_on_save,
-	--    lua = format_on_save,
+	lua = format_on_save,
+	js = format_on_save,
+	rust = format_on_save,
+	ts = format_on_save,
 
 	gdscript = function(_) end,
 }, {
@@ -25,15 +23,15 @@ local filetype_attach = setmetatable({
 vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, {})
 
 vim.keymap.set("n", "<leader>vf", function()
-    return vim.lsp.buf.format({ async = true })
+	return vim.lsp.buf.format({ async = true })
 end, {})
 
 local function on_attach(client)
 	local filetype = vim.api.nvim_buf_get_option(0, "filetype")
 	-- keymaps for lsp
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
+	vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
+	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
 	vim.keymap.set("n", "<leader>vn", vim.diagnostic.goto_next, { buffer = 0 })
 	vim.keymap.set("n", "<leader>vp", vim.diagnostic.goto_prev, { buffer = 0 })
@@ -54,7 +52,7 @@ end
 -- })
 
 vim.diagnostic.config({
-  virtual_text = false,
+	virtual_text = false,
 })
 
 local signs = { Error = "⛔", Warn = "⚠️", Hint = "💡", Info = "ℹ️" }
