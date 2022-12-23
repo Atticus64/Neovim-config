@@ -20,7 +20,7 @@ augroups.misc = {
         pattern = '*',
         callback = function()
             if vim.bo.filetype == 'handlebars' then
-                vim.cmd [[set syntax=html]]
+                vim.cmd.set('syntax=html')
             end
         end
     }

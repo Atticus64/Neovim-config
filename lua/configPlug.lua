@@ -1,4 +1,4 @@
-local config = vim.env.MYVIMRC
+-- local config = vim.env.MYVIMRC
 -- You can change this variable to your dotfiles
 require('prettier').setup {
 	  bin = 'prettier', -- or `'prettierd'` (v0.22+)
@@ -33,23 +33,19 @@ require'bufferline'.setup {
     auto_hide = false,
     -- Enable/disable current/total tabpages indicator (top right corner)
     tabpages = true,
-  
     -- Enable/disable close button
     closable = true,
-  
     -- Enables/disable clickable tabs
     --  - left-click: go to buffer
     --  - middle-click: delete buffer
     clickable = true,
-  
     -- Excludes buffers from the tabline
     exclude_name = {'package.json'},
-  
     -- Enable/disable icons
     -- if set to 'numbers', will show buffer index in the tabline
     -- if set to 'both', will show buffer index and icons in the tabline
     icons = true,
-}  
+}
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "c", "lua", "rust", "python", "javascript"},
@@ -73,9 +69,9 @@ require('nvim_comment').setup()
 
 
 require('telescope').setup {
-		defaults = { 
+		defaults = {
       file_ignore_patterns = {
-        "node_modules", 
+        "node_modules",
         ".git"
       }
     },
@@ -86,7 +82,7 @@ require'hop'.setup()
 -- require('onedark').setup {
     -- transparent = true,  -- Show/hide background
 -- }
-require('onedark').load() 
+require('onedark').load()
 
 vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
 
