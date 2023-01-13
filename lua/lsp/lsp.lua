@@ -110,7 +110,7 @@ require("lspconfig").gdscript.setup({
 
 require("lspconfig").tsserver.setup({
 	on_attach = on_attach,
-	autostart = false,
+	autostart = true,
 	flags = lsp_flags,
 })
 
