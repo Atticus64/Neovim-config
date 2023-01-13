@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+vim.g.astro_typescript = 'enable'
+vim.g.astro_stylus = 'enable'
 
 local options = vim.o
 
@@ -23,7 +25,7 @@ vim.opt.colorcolumn = "80"
 
 
 vim.cmd.set('mouse=a')
-vim.cmd.colorscheme('onedark')
+vim.cmd.colorscheme('tokyonight-storm')
 vim.cmd.set('noexpandtab')
 vim.cmd.set('nolist')
 vim.cmd.set('noshowmode')

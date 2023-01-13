@@ -13,6 +13,7 @@ vim.keymap.set("n", "<space>dr", function()
 	vim.lsp.codelens.run()
 end)
 
+vim.keymap.set("n", "<Leader>pv", vim.cmd.Ex)
 -- exit insert mode
 map("i", ",,", "<esc>")
 
@@ -63,7 +64,8 @@ map("n", "<Leader>Y", ":%y+<CR>")
 map("n", "Y", "y$")
 map("n", "<leader>g", "$")
 map("n", "<leader>a", "^")
-
+map('n', '<leader>th', ':botright new <Bar> :terminal<CR>')
+map('n', '<leader>ts', ':botright vnew <Bar> :terminal<CR>')
 
 -- Telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>")
@@ -80,8 +82,6 @@ map("n", "<C-h>", ":lua require('tmux').move_left()<CR>")
 map("n", "<C-l>", ":lua require('tmux').move_right()<CR>")
 map("n", "<C-k>", ":lua require('tmux').move_bottom()<CR>")
 map("n", "<C-j>", ":lua require('tmux').move_top()<CR>")
-
-
 
 -- barbar shortcuts
 map('n', '<A-,>', ':BufferPrevious<CR>')
@@ -104,16 +104,7 @@ map('n', '<A-0>', ':BufferLast<CR>')
 map('n', '<A-p>', ':BufferPin<CR>')
 -- Close buffer
 map('n', '<A-c>', ':BufferClose<CR>')
--- Wipeout buffer
---                 :BufferWipeout
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
--- Magic buffer-picking mode
-map('n', '<C-p>', ':BufferPick<CR>')
+map('n', '<C-p>', ':Telescope git_files<CR>')
 -- Sort automatically by...
 map('n', '<leader>bb', ':BufferOrderByBufferNumber<CR>')
 map('n', '<leader>bd', ':BufferOrderByDirectory<CR>')
