@@ -1,12 +1,11 @@
-
-if require "install_packer"() then
-  return
+if require "install_packer" () then
+	return
 end
 
 
 require "plugins"
-require "options"
 require "configPlug"
+require "options"
 require "keymaps.maps"
 require "automatics"
 require "lsp.lsp"

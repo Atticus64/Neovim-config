@@ -7,6 +7,17 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate'
 	}
 
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		config = function()
+			require('lspsaga').setup({})
+		end,
+	})
+	use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+
+	use { 'Atticus64/infinity_train.nvim' }
+
 	use { 'folke/tokyonight.nvim' }
 
 	use { 'EdenEast/nightfox.nvim' }
@@ -128,11 +139,6 @@ return require('packer').startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 	})
 
-	-- barbar
-	use {
-		'romgrk/barbar.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons' }
-	}
 
 	-- You can alias plugin names
 	use {

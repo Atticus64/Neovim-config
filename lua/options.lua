@@ -25,7 +25,11 @@ vim.opt.colorcolumn = "80"
 
 
 vim.cmd.set('mouse=a')
-vim.cmd.colorscheme('tokyonight-storm')
+local ok = pcall(vim.cmd.colorscheme, 'tulip')
+if not ok then
+	vim.cmd.colorscheme('tokyonight-storm')
+end
+vim.cmd.colorscheme('tulip')
 vim.cmd.set('noexpandtab')
 vim.cmd.set('nolist')
 vim.cmd.set('noshowmode')
