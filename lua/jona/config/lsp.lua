@@ -2,7 +2,6 @@ local format_on_save = function(_)
 	vim.cmd.autocmd('BufWritePre * lua vim.lsp.buf.formatting_sync()')
 end
 
-
 local filetype_attach = setmetatable({
 	-- go = format_on_save,
 	-- php = format_on_save,
@@ -98,10 +97,6 @@ require("lspconfig").emmet_ls.setup({
 	flags = lsp_flags,
 })
 
-require("lspconfig").gopls.setup({
-	on_attach = on_attach,
-	flags = lsp_flags,
-})
 
 require("lspconfig").gdscript.setup({
 	on_attach = on_attach,
@@ -114,14 +109,11 @@ require("lspconfig").tsserver.setup({
 	flags = lsp_flags,
 })
 
+require("lspconfig").volar.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+})
 
--- require("lspconfig").denols.setup({
--- 	on_attach = on_attach,
---
--- 	root_dir = nvim_lsp.util.root_pattern("deno.json"),
--- 	flags = lsp_flags,
--- })
---
 require "deno-nvim".setup({
 	server = {
 		on_attach = on_attach,
@@ -152,11 +144,6 @@ require "deno-nvim".setup({
 			}
 		}
 	}
-})
-
-require("lspconfig").volar.setup({
-	on_attach = on_attach,
-	flags = lsp_flags,
 })
 
 require("lspconfig")["sumneko_lua"].setup({

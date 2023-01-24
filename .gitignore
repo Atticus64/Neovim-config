@@ -1,12 +1,1 @@
-
-autoload/
-plugged/
-README.md.backup
-
-./plugin/*
-./plugin/packer_compiled.lua
-plugin/
-.luarc.json
-plugged/
-autoload/
-README.md.backup
+lazy-lock.json
