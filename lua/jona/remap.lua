@@ -10,11 +10,20 @@ end
 -- exit insert mode
 Map("i", ",,", "<esc>")
 
+Map('n', "<leader>cf", ":lua config()<CR>")
+
 -- exit virtual mode
 Map("v", ",,", "<esc>")
 
+Map("v", "J", ":m '>+1<CR>gv=gv")
+Map("v", "K", ":m '<-2<CR>gv=gv")
+
 -- close file
 Map("n", "<Leader>q", ":q<CR>")
+
+-- exit terminal
+Map("t", "<C-k>", "<C-\\><C-n>")
+
 
 -- save file
 Map("n", "<Leader>w", ":w<CR>")

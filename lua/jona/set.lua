@@ -22,6 +22,9 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
+function config()
+	vim.cmd.edit('~/.config/nvim')
+end
 
 vim.cmd.set('mouse=a')
 local ok = pcall(vim.cmd.colorscheme, 'tulip')
