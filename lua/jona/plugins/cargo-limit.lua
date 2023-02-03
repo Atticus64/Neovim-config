@@ -1,0 +1,3 @@
+return {
+	"alopatindev/cargo-limit",
+}

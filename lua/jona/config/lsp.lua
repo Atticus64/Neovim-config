@@ -1,3 +1,5 @@
+local util = require('lspconfig/util')
+
 local format_on_save = function(_)
 	vim.cmd.autocmd('BufWritePre * lua vim.lsp.buf.formatting_sync()')
 end
@@ -105,7 +107,8 @@ require("lspconfig").gdscript.setup({
 
 require("lspconfig").tsserver.setup({
 	on_attach = on_attach,
-	autostart = true,
+	autostart = false,
+	root_dir = util.root_pattern("package.json", "tsconfig.json"),
 	flags = lsp_flags,
 })
 
@@ -116,8 +119,10 @@ require("lspconfig").volar.setup({
 
 require "deno-nvim".setup({
 	server = {
+		autostart = false,
 		on_attach = on_attach,
 		capabilities = lsp_flags,
+		root_dir = util.root_pattern("deno.json"),
 		settings = {
 			deno = {
 				inlayHints = {
@@ -156,9 +161,6 @@ require("lspconfig")["sumneko_lua"].setup({
 			},
 			diagnostics = {
 				globals = { "vim" },
-			},
-			workspace = {
-				library = vim.api.nvim_get_runtime_file("", true),
 			},
 			telemetry = {
 				enable = false,

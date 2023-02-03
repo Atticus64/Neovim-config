@@ -12,6 +12,10 @@ Map("i", ",,", "<esc>")
 
 Map('n', "<leader>cf", ":lua config()<CR>")
 
+Map('n', "<leader>nj", ":LspStart tsserver<CR>")
+
+Map('n', "<leader>dj", ":LspStart denols<CR>")
+
 -- exit virtual mode
 Map("v", ",,", "<esc>")
 
