@@ -1,0 +1,3 @@
+return {
+	"jlcrochet/vim-crystal"
+}

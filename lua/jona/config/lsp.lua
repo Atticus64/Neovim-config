@@ -11,11 +11,12 @@ local filetype_attach = setmetatable({
 	js = format_on_save,
 	rust = format_on_save,
 	ts = format_on_save,
-
-	gdscript = function(_) end,
+	gdscript = function(_)
+	end,
 }, {
 	__index = function()
-		return function() end
+		return function()
+		end
 	end,
 })
 
@@ -145,13 +146,12 @@ require "deno-nvim".setup({
 						enabled = true
 					},
 				}
-
 			}
 		}
 	}
 })
 
-require("lspconfig")["sumneko_lua"].setup({
+require("lspconfig")["lua_ls"].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
 	settings = {

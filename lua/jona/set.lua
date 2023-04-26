@@ -27,11 +27,10 @@ function config()
 end
 
 vim.cmd.set('mouse=a')
-local ok = pcall(vim.cmd.colorscheme, 'tulip')
-if not ok then
-	vim.cmd.colorscheme('tokyonight-storm')
-end
-vim.cmd.colorscheme('tulip')
+-- local ok = pcall(vim.cmd.colorscheme, 'ulip')
+-- if not ok then
+vim.cmd.colorscheme('catppuccin-macchiato')
+-- end
 vim.cmd.set('noexpandtab')
 vim.cmd.set('nolist')
 vim.cmd.set('noshowmode')
