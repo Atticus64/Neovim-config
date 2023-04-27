@@ -1,3 +1,4 @@
 return {
-	"jlcrochet/vim-crystal"
+	"jlcrochet/vim-crystal",
+	lazy = true
 }

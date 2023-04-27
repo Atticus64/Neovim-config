@@ -3,4 +3,9 @@ return {
 	config = function()
 		require('nvim_comment').setup()
 	end,
+	lazy = true, 
+	keys = {
+		{ 'gcc', ":CommentToggle<cr>", desc = "Comentario" }
+	}
+
 }

@@ -23,7 +23,21 @@ augroups.misc = {
 				vim.cmd.set('syntax=html')
 			end
 		end
-	}
+	},
+	v_lang = {
+		event = 'BufRead',
+		pattern = '*.v',
+		callback = function()
+			vim.cmd.setfiletype("vlang")
+		end
+	},
+	v_lang_new = {
+		event = 'BufNewFile',
+		pattern = '*.v',
+		callback = function()
+			vim.cmd.setfiletype("vlang")
+		end
+	},
 }
 
 

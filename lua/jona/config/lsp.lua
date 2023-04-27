@@ -78,6 +78,20 @@ require("lspconfig")["rust_analyzer"].setup({
 	},
 })
 
+require("lspconfig")["crystalline"].setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	-- Server-specific settings...
+})
+
+require("lspconfig")["gopls"].setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	-- Server-specific settings...
+})
+
+
+
 require("lspconfig").dockerls.setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
@@ -100,6 +114,10 @@ require("lspconfig").emmet_ls.setup({
 	flags = lsp_flags,
 })
 
+require("lspconfig").clangd.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+})
 
 require("lspconfig").gdscript.setup({
 	on_attach = on_attach,
@@ -108,15 +126,16 @@ require("lspconfig").gdscript.setup({
 
 require("lspconfig").tsserver.setup({
 	on_attach = on_attach,
-	autostart = false,
-	root_dir = util.root_pattern("package.json", "tsconfig.json"),
 	flags = lsp_flags,
+	 root_dir = util.root_pattern("package.json", "tsconfig.json"),
 })
 
 require("lspconfig").volar.setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
 })
+
+require('lspconfig').vls.setup {}
 
 require "deno-nvim".setup({
 	server = {
@@ -154,19 +173,6 @@ require "deno-nvim".setup({
 require("lspconfig")["lua_ls"].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
-	settings = {
-		Lua = {
-			runtime = {
-				version = "LuaJIT",
-			},
-			diagnostics = {
-				globals = { "vim" },
-			},
-			telemetry = {
-				enable = false,
-			},
-		},
-	},
 })
 
 

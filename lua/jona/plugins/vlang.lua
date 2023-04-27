@@ -1,4 +1,4 @@
 return {
-	'sigmasd/deno-nvim',
+	"ollykel/v-vim",
 	lazy = true
 }
