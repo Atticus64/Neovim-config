@@ -30,9 +30,9 @@ Map('n', "<leader>nj", ":LspStart tsserver<CR>")
 
 Map('n', "<leader>cd", ":Lspsaga show_buf_diagnostics<CR>")
 
-Map('n', "<C-s>", ":lua spaces()<CR>")
+Map('n', "<leader>ss", ":lua spaces()<CR>")
 
-Map('n', "<C-t>", ":lua tabs()")
+Map('n', "<leader>st", ":lua tabs()")
 
 Map('n', "<leader>dj", ":LspStart denols<CR>")
 
