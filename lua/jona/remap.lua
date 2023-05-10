@@ -11,12 +11,14 @@ end
 -- exit insert mode
 Map("i", ",,", "<esc>")
 Map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
-	{ noremap = true, silent = true })
+	{noremap = true, silent = true })
+
+Map("n", '<leader>%', ':%y')
 
 Map('n', "<leader>pf", "<cmd>Telescope git_files<cr>")
 Map('n', "<leader>ct", "<cmd>Telescope colorscheme<cr>")
-Map('n', "<leader>fg", ":Telescope live_grep<CR>") 
-Map('n', "<leader>fd", ":Telescope diagnostics<CR>") 
+Map('n', "<leader>fg", ":Telescope live_grep<CR>")
+Map('n', "<leader>fd", ":Telescope diagnostics<CR>")
 Map('n', "<leader>fb", ":Telescope buffers<CR>")
 Map('n', "<leader>fh", ":Telescope help_tags<CR>")
 

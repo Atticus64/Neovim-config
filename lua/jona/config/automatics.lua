@@ -15,29 +15,6 @@ augroups.misc = {
 			vim.opt_local.buflisted = false
 		end
 	},
-	syntax_hbs = {
-		event = 'BufWinEnter',
-		pattern = '*',
-		callback = function()
-			if vim.bo.filetype == 'handlebars' then
-				vim.cmd.set('syntax=html')
-			end
-		end
-	},
-	v_lang = {
-		event = 'BufRead',
-		pattern = '*.v',
-		callback = function()
-			vim.cmd.setfiletype("vlang")
-		end
-	},
-	v_lang_new = {
-		event = 'BufNewFile',
-		pattern = '*.v',
-		callback = function()
-			vim.cmd.setfiletype("vlang")
-		end
-	},
 }
 
 

@@ -1,16 +1,6 @@
 local util = require('lspconfig/util')
 
-local format_on_save = function(_)
-	vim.cmd.autocmd('BufWritePre * lua vim.lsp.buf.formatting_sync()')
-end
-
 local filetype_attach = setmetatable({
-	-- go = format_on_save,
-	-- php = format_on_save,
-	lua = format_on_save,
-	js = format_on_save,
-	rust = format_on_save,
-	ts = format_on_save,
 	gdscript = function(_)
 	end,
 }, {
@@ -19,7 +9,6 @@ local filetype_attach = setmetatable({
 		end
 	end,
 })
-
 
 -- Since I use null os this allows to have the format and actions
 -- in all buffers not just configured servers
@@ -126,9 +115,23 @@ require("lspconfig").gdscript.setup({
 
 require("lspconfig").tsserver.setup({
 	on_attach = on_attach,
+	autostart = true,
 	flags = lsp_flags,
-	 root_dir = util.root_pattern("package.json", "tsconfig.json"),
+	root_dir = util.root_pattern("package.json"),
 })
+
+require("lspconfig").svelte.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	root_dir = util.root_pattern("svelte.config.js"),
+})
+
+require("lspconfig").tailwindcss.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	root_dir = util.root_pattern("package.json"),
+})
+
 
 require("lspconfig").volar.setup({
 	on_attach = on_attach,
@@ -139,10 +142,10 @@ require('lspconfig').vls.setup {}
 
 require "deno-nvim".setup({
 	server = {
-		autostart = false,
+		autostart = true,
 		on_attach = on_attach,
 		capabilities = lsp_flags,
-		root_dir = util.root_pattern("deno.json"),
+		root_dir = util.root_pattern("deno.jsonc"),
 		settings = {
 			deno = {
 				inlayHints = {
