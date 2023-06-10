@@ -1,18 +1,20 @@
 return {
-	{ 'Atticus64/infinity_train.nvim' },
-	{ 'catppuccin/nvim' },
+	{ 'Atticus64/infinity_train.nvim', },
+	{ 'catppuccin/nvim', },
+	{ 'rebelot/kanagawa.nvim', },
+	{ 'sainnhe/everforest', },
 
 	{
 		'catppuccin/nvim',
-		name = "catppuccin"
+		name = "catppuccin",
 	},
 	{
 		"folke/tokyonight.nvim",
-		lazy = false,  -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			-- load the colorscheme here
-			vim.cmd.colorscheme('catppuccin-macchiato')
+			-- vim.cmd.colorscheme('catppuccin-macchiato')
+			vim.cmd.colorscheme('everforest')
 		end,
 	},
 }

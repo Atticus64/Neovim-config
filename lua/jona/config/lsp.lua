@@ -47,7 +47,7 @@ vim.diagnostic.config({
 	virtual_text = false,
 })
 
-local signs = { Error = "⛔", Warn = "⚠️", Hint = "💡", Info = "ℹ️" }
+local signs = { Error = "⛔", Warn = "", Hint = "💡", Info = "❗" }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
@@ -63,7 +63,11 @@ require("lspconfig")["rust_analyzer"].setup({
 	flags = lsp_flags,
 	-- Server-specific settings...
 	settings = {
-		["rust-analyzer"] = {},
+		["rust-analyzer"] = {
+			checkOnSave = {
+				command = "clippy",
+			},
+		},
 	},
 })
 
@@ -114,10 +118,11 @@ require("lspconfig").gdscript.setup({
 })
 
 require("lspconfig").tsserver.setup({
+	autostart = false,
 	on_attach = on_attach,
 	autostart = true,
 	flags = lsp_flags,
-	root_dir = util.root_pattern("package.json"),
+	-- root_dir = util.root_pattern("package.json", "tsconfig.json"),
 })
 
 require("lspconfig").svelte.setup({
@@ -145,7 +150,7 @@ require "deno-nvim".setup({
 		autostart = true,
 		on_attach = on_attach,
 		capabilities = lsp_flags,
-		root_dir = util.root_pattern("deno.jsonc"),
+		-- root_dir = util.root_pattern("deno.jsonc"),
 		settings = {
 			deno = {
 				inlayHints = {
