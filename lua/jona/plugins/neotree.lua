@@ -13,6 +13,11 @@ return {
 	enable_git_status = true,
 	enable_diagnostics = true,
 	config = function()
-		require("neo-tree").setup({})
+		require("neo-tree").setup({
+			window = {
+				position = "right",
+				width = 20,
+			}
+		})
 	end,
 }
