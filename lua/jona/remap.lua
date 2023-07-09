@@ -10,6 +10,8 @@ end
 
 -- exit insert mode
 Map("i", ",,", "<esc>")
+Map('n', '<A-j>', ':m .+1<CR>')
+Map('n', '<A-k>', ':m .-2<CR>')
 Map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
 	{noremap = true, silent = true })
 
