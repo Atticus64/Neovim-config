@@ -27,6 +27,11 @@ function config()
 	vim.cmd.edit('~/.config/nvim')
 end
 
+function check_todos()
+	vim.cmd.edit('~/orgfiles/jona/todos.org')
+end
+
+
 function tabs()
 	options.tabstop = 4
 	options.shiftwidth = 4

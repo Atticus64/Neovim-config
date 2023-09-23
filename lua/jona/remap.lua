@@ -11,6 +11,7 @@ end
 -- exit insert mode
 Map("i", ",,", "<esc>")
 Map('n', '<A-j>', ':m .+1<CR>')
+Map('n', '<Leader>gt', ':lua check_todos()<CR>')
 Map('n', '<A-k>', ':m .-2<CR>')
 Map('n', '<Leader>ff', ':lua require"telescope.builtin".git_files({ hidden = true })<CR>',
 	{noremap = true, silent = true })
@@ -43,8 +44,8 @@ Map('n', "<leader>st", ":lua tabs()")
 
 Map('n', "<leader>dj", ":LspStart denols<CR>")
 
-Map('n', "<C-i>", ":BufferLineCycleNext<CR>")
-Map('n', "<C-o>", ":BufferLineCyclePrev<CR>")
+Map('n', "<C-A-h>", ":BufferLineCycleNext<CR>")
+Map('n', "<C-A-l>", ":BufferLineCyclePrev<CR>")
 
 -- exit virtual mode
 Map("v", ",,", "<esc>")
