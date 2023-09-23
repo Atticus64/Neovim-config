@@ -3,7 +3,7 @@ return {
 	build = ':TSUpdate',
 	config = function()
 		require 'nvim-treesitter.configs'.setup {
-			ensure_installed = { "c", "lua", "vim", "css" },
+			ensure_installed = { "c", "lua", "vim", "css", "org" },
 
 			sync_install = false,
 
@@ -12,7 +12,9 @@ return {
 			highlight = {
 				-- `false` will disable the whole extension
 				enable = true,
-				additional_vim_regex_highlighting = false,
+			    disable = {'org'}, -- Remove this to use TS highlighter for some of the highlights (Experimental)
+    			additional_vim_regex_highlighting = {'org'}, -- Required since TS highlighter doesn't support all syntax features (conceal)
+
 			},
 		}
 	end,

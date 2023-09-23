@@ -8,13 +8,13 @@ augroups.misc = {
 			vim.highlight.on_yank { higroup = "IncSearch", timeout = 400, on_visual = true }
 		end,
 	},
-	unlist_terminal = {
-		event = "TermOpen",
-		pattern = "*",
-		callback = function()
-			vim.opt_local.buflisted = false
-		end
-	},
+	-- unlist_terminal = {
+	-- 	event = "TermOpen",
+	-- 	pattern = "*",
+	-- 	callback = function()
+	-- 		vim.opt_local.buflisted = false
+	-- 	end
+	-- },
 }
 
 
@@ -28,9 +28,4 @@ for group, commands in pairs(augroups) do
 		vim.api.nvim_create_autocmd(event, opts)
 	end
 
-	-- vim.api.nvim_create_autocmd("VimEnter", {
-	-- 	callback = function()
-	-- 		vim.cmd("silent! lua require('telescope.builtin').find_files()")
-	-- 	end
-	-- })
 end

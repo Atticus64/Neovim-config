@@ -12,7 +12,10 @@ end
 Map("i", ",,", "<esc>")
 Map('n', '<A-j>', ':m .+1<CR>')
 Map('n', '<A-k>', ':m .-2<CR>')
-Map('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
+Map('n', '<Leader>ff', ':lua require"telescope.builtin".git_files({ hidden = true })<CR>',
+	{noremap = true, silent = true })
+
+Map('n', '<Leader>fa', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
 	{noremap = true, silent = true })
 
 Map("n", '<leader>%', ':%y')
