@@ -10,6 +10,7 @@ end
 
 -- exit insert mode
 Map("i", ",,", "<esc>")
+Map("n", "<Leader>nt", ":Oil --float<CR>")
 Map('n', '<A-j>', ':m .+1<CR>')
 Map('n', '<Leader>gt', ':lua check_todos()<CR>')
 Map('n', '<A-k>', ':m .-2<CR>')
@@ -53,7 +54,7 @@ Map("v", ",,", "<esc>")
 Map("v", "J", ":m '>+1<CR>gv=gv")
 Map("v", "K", ":m '<-2<CR>gv=gv")
 
-Map("n", "<leader>nt", ":NeoTreeRevealToggle<CR>")
+-- Map("n", "<leader>nt", ":NeoTreeRevealToggle<CR>")
 -- close file
 Map("n", "<Leader>q", ":q<CR>")
 

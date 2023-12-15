@@ -12,12 +12,12 @@ return {
 	use_libuv_file_watcher = false,
 	enable_git_status = true,
 	enable_diagnostics = true,
-	config = function()
-		require("neo-tree").setup({
-			window = {
-				position = "right",
-				width = 20,
-			}
-		})
-	end,
+	-- config = function()
+	-- 	require("neo-tree").setup({
+	-- 		window = {
+	-- 			position = "right",
+	-- 			width = 20,
+	-- 		}
+	-- 	})
+	-- end,
 }
