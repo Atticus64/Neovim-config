@@ -16,6 +16,10 @@ Map('n', '<Leader>gt', ':lua check_todos()<CR>')
 Map('n', '<A-k>', ':m .-2<CR>')
 Map('n', '<Leader>ff', ':lua require"telescope.builtin".git_files({ hidden = true })<CR>',
 	{noremap = true, silent = true })
+Map('n', '<Leader>fb', ':lua require"telescope.builtin".buffers({ hidden = true })<CR>',
+	{noremap = true, silent = true })
+Map('n', '<Leader>fc', ':lua require"telescope.builtin".git_commits({ hidden = true })<CR>',
+	{noremap = true, silent = true })
 
 Map('n', '<Leader>fa', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
 	{noremap = true, silent = true })
@@ -45,8 +49,8 @@ Map('n', "<leader>st", ":lua tabs()")
 
 Map('n', "<leader>dj", ":LspStart denols<CR>")
 
-Map('n', "<C-A-h>", ":BufferLineCycleNext<CR>")
-Map('n', "<C-A-l>", ":BufferLineCyclePrev<CR>")
+Map('n', "<C-A-h>", ":BufferLineCyclePrev<CR>")
+Map('n', "<C-A-l>", ":BufferLineCycleNext<CR>")
 
 -- exit virtual mode
 Map("v", ",,", "<esc>")
