@@ -1,0 +1,91 @@
+add_newline = false
+
+format = """
+$username$directory$git_branch$git_status$rust$nodejs$deno$go$battery$cmd_duration
+$character
+"""
+
+command_timeout = 2000
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+# success_symbol = '[->](bold green)'
+# error_symbol = '[->](bold red)'
+# success_symbol = '[\$](bold white)'
+# error_symbol = '[\$](bold red)'
+
+[[battery.display]] # 'bold red' style and discharging_symbol when capacity is between 0% and 10%
+threshold = 30
+style = 'bold red'
+
+[[battery.display]]  
+threshold = 50
+style = '#bf9300'
+discharging_symbol = '󰁽 '
+
+[[battery.display]] 
+threshold = 100
+style = 'bold yellow'
+discharging_symbol = '⚡️ '
+
+
+[battery]
+full_symbol = '🚀 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+disabled = false
+
+[username]
+style_user = "yellow bold"
+style_root = "black bold"
+# format = " [$user]($style) ☕ "
+format = "[$user]($style) ☕ "
+disabled = false
+show_always = true
+#
+[aws]
+symbol = "  "
+
+[c]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[nodejs]
+symbol = "🐢 "
+
+# Redhat = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+
