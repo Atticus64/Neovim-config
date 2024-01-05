@@ -24,7 +24,7 @@ local function on_attach(client)
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = 0 })
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = 0 })
-	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
+	-- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
 	vim.keymap.set("n", "<leader>vn", vim.diagnostic.goto_next, { buffer = 0 })
 	vim.keymap.set("n", "<leader>vp", vim.diagnostic.goto_prev, { buffer = 0 })
 	vim.keymap.set("i", "<c-h>", vim.lsp.buf.signature_help, { buffer = 0 })
@@ -71,16 +71,10 @@ require("lspconfig")["rust_analyzer"].setup({
 	},
 })
 
-require("lspconfig")["crystalline"].setup({
-	on_attach = on_attach,
-	flags = lsp_flags,
-	-- Server-specific settings...
-})
 
 require("lspconfig")["gopls"].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
-	-- Server-specific settings...
 })
 
 
@@ -97,9 +91,7 @@ require("lspconfig")["intelephense"].setup({
 require("lspconfig").jsonls.setup({
 	flags = lsp_flags,
 })
-require("lspconfig").html.setup({
-	flags = lsp_flags,
-})
+
 require("lspconfig").html.setup({
 	flags = lsp_flags,
 })
@@ -120,7 +112,6 @@ require("lspconfig").gdscript.setup({
 require("lspconfig").tsserver.setup({
 	autostart = false,
 	on_attach = on_attach,
-	autostart = true,
 	flags = lsp_flags,
 	-- root_dir = util.root_pattern("package.json", "tsconfig.json"),
 })
@@ -153,6 +144,7 @@ require "deno-nvim".setup({
 		-- root_dir = util.root_pattern("deno.jsonc"),
 		settings = {
 			deno = {
+				unstable = true,
 				inlayHints = {
 					parameterNames = {
 						enabled = "all"

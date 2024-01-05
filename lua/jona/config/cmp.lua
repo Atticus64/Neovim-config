@@ -4,7 +4,6 @@ if not ok then
 end
 
 local lspkind = require("lspkind")
-local luasnip = require("luasnip")
 
 cmp.setup({
 	mapping = {
