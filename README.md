@@ -1,6 +1,6 @@
 # Nvim Lua Config
 
-<img width='80%' src='https://i.postimg.cc/WzYTCF5Y/nvim-lazy.png'>
+<img width='80%' src='https://i.postimg.cc/T1V27Bp6/image.png'>
 
 | startup time: 90/110 ms 
 
