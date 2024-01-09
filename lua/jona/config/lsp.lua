@@ -10,6 +10,8 @@ local filetype_attach = setmetatable({
 	end,
 })
 
+require("neoconf").setup()
+
 -- Since I use null os this allows to have the format and actions
 -- in all buffers not just configured servers
 vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, {})
@@ -141,9 +143,13 @@ require "deno-nvim".setup({
 		autostart = true,
 		on_attach = on_attach,
 		capabilities = lsp_flags,
-		-- root_dir = util.root_pattern("deno.jsonc"),
 		settings = {
 			deno = {
+				fmt = {
+					options = {
+						semicolons = false
+					}
+				},
 				unstable = true,
 				inlayHints = {
 					parameterNames = {

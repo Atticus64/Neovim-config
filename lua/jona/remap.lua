@@ -1,6 +1,6 @@
 -- Functional wrapper for mapping custom keybindings
 function Map(mode, lhs, rhs, opts)
-	local options = { noremap = true }
+	local options = { noremap = true, silent = true }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end
@@ -11,6 +11,8 @@ end
 -- exit insert mode
 Map("i", ",,", "<esc>")
 Map("n", "<Leader>nt", ":Oil --float<CR>")
+Map("n", "+", "<C-a>")
+Map("n", "-", "<C-x>")
 Map('n', '<A-j>', ':m .+1<CR>')
 Map('n', '<Leader>gt', ':lua check_todos()<CR>')
 Map('n', '<A-k>', ':m .-2<CR>')
@@ -80,8 +82,6 @@ Map("n", "<Leader>d", ":tabNext<CR>")
 -- open tab edit
 Map("n", "<leader>te", ":tabedit ")
 
-Map("n", "-", "11k")
-Map("n", "m", "10j")
 Map("n", "<Leader>Y", ":%y+<CR>")
 Map("n", "Y", "y$")
 Map("n", "<leader>g", "$")

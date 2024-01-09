@@ -8,6 +8,12 @@ augroups.misc = {
 			vim.highlight.on_yank { higroup = "IncSearch", timeout = 400, on_visual = true }
 		end,
 	},
+
+	format_on_save = {
+		event = "BufWritePre",
+		pattern = "*",
+		command = "lua vim.lsp.buf.format({ async = true })",
+	}
 	-- unlist_terminal = {
 	-- 	event = "TermOpen",
 	-- 	pattern = "*",

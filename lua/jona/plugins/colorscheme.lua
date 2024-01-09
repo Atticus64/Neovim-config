@@ -3,6 +3,7 @@ return {
 	{ 'catppuccin/nvim', },
 	{ 'rebelot/kanagawa.nvim', },
 	{ 'sainnhe/everforest', },
+	{   "tiagovla/tokyodark.nvim" },
 	{ 'EdenEast/nightfox.nvim', },
 
 	{
