@@ -12,8 +12,6 @@ local filetype_attach = setmetatable({
 
 require("neoconf").setup()
 
--- Since I use null os this allows to have the format and actions
--- in all buffers not just configured servers
 vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, {})
 
 vim.keymap.set("n", "<leader>vf", function()
@@ -185,4 +183,9 @@ require("lspconfig")["lua_ls"].setup({
 require('lspconfig')["pyright"].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
+	settings = {
+		python = {
+			pythonPath = vim.fn.exepath("python3"),
+		},
+	},
 })

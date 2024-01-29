@@ -12,7 +12,9 @@ augroups.misc = {
 	format_on_save = {
 		event = "BufWritePre",
 		pattern = "*",
-		command = "lua vim.lsp.buf.format({ async = true })",
+		callback = function()
+			vim.lsp.buf.format()
+		end,
 	}
 	-- unlist_terminal = {
 	-- 	event = "TermOpen",
@@ -33,5 +35,4 @@ for group, commands in pairs(augroups) do
 		opts.group = augroup
 		vim.api.nvim_create_autocmd(event, opts)
 	end
-
 end
