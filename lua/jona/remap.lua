@@ -7,24 +7,24 @@ function Map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-
 -- exit insert mode
 Map("i", ",,", "<esc>")
 Map("n", "<Leader>nt", ":Oil --float<CR>")
+Map("n", "<Leader>fm", ":lua vim.lsp.buf.format()<CR>")
 Map("n", "+", "<C-a>")
 Map("n", "-", "<C-x>")
 Map('n', '<A-j>', ':m .+1<CR>')
 Map('n', '<Leader>gt', ':lua check_todos()<CR>')
 Map('n', '<A-k>', ':m .-2<CR>')
 Map('n', '<Leader>ff', ':lua require"telescope.builtin".git_files({ hidden = true })<CR>',
-	{noremap = true, silent = true })
+	{ noremap = true, silent = true })
 Map('n', '<Leader>fb', ':lua require"telescope.builtin".buffers({ hidden = true })<CR>',
-	{noremap = true, silent = true })
+	{ noremap = true, silent = true })
 Map('n', '<Leader>fc', ':lua require"telescope.builtin".git_commits({ hidden = true })<CR>',
-	{noremap = true, silent = true })
+	{ noremap = true, silent = true })
 
 Map('n', '<Leader>fa', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
-	{noremap = true, silent = true })
+	{ noremap = true, silent = true })
 
 Map("n", '<leader>%', ':%y')
 
