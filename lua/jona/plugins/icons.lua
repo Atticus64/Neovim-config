@@ -7,6 +7,10 @@ return  {
 				icon = '',
 				color = '#ff9e64',
 				name = 'Lpr',
+			},
+			toml = {
+				icon = '',
+				color = '#29b8db',
 			}
 		}
 	end

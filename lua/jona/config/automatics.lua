@@ -13,7 +13,7 @@ augroups.misc = {
 		event = "BufWritePre",
 		pattern = "*",
 		callback = function()
-			vim.lsp.buf.format()
+			--vim.lsp.buf.format()
 		end,
 	}
 	-- unlist_terminal = {
