@@ -13,7 +13,7 @@ Map("n", "<Leader>nt", ":Oil --float<CR>")
 Map("n", "<Leader>fm", ":lua vim.lsp.buf.format()<CR>")
 Map("n", "+", "<C-a>")
 Map("n", "-", "<C-x>")
-Map('n', '<A-j>', ':m .+1<CR>')
+Map('n', '<A-j>', ':m .+2<CR>')
 Map('n', '<Leader>gt', ':lua check_todos()<CR>')
 Map('n', '<A-k>', ':m .-2<CR>')
 Map('n', '<Leader>ff', ':lua require"telescope.builtin".git_files({ hidden = true })<CR>',
@@ -44,6 +44,7 @@ Map('n', "<leader>ee", ":lua env()<CR>")
 Map('n', "<leader>nj", ":LspStart tsserver<CR>")
 
 Map('n', "<leader>cd", ":Lspsaga show_buf_diagnostics<CR>")
+Map('n', "<leader>ca", ":Lspsaga code_action<CR>")
 
 Map('n', "<leader>ss", ":lua spaces()<CR>")
 
@@ -51,8 +52,8 @@ Map('n', "<leader>st", ":lua tabs()")
 
 Map('n', "<leader>dj", ":LspStart denols<CR>")
 
-Map('n', "<C-A-h>", ":BufferLineCyclePrev<CR>")
-Map('n', "<C-A-l>", ":BufferLineCycleNext<CR>")
+Map('n', "<leader>h", ":BufferLineCyclePrev<CR>")
+Map('n', "<leader>l", ":BufferLineCycleNext<CR>")
 
 -- exit virtual mode
 Map("v", ",,", "<esc>")

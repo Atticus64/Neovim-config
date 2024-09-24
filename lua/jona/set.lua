@@ -14,6 +14,7 @@ options.numberwidth = 1
 options.guicursor = ""
 options.cursorline = true
 options.encoding = 'utf-8'
+options.fileencoding = 'utf-8'
 options.laststatus = 2
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -54,3 +55,4 @@ vim.cmd.set('noexpandtab')
 vim.cmd.set('nolist')
 vim.cmd.set('noshowmode')
 vim.cmd.set('showmatch')
+
